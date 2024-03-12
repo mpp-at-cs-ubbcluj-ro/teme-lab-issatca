@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class AbstractRepository <T extends Identifiable<ID>, ID> implements Repository<T, ID> {
 
-   // private final static Logger log= LogManager.getLogger();
+    // private final static Logger log= LogManager.getLogger();
     protected Map<ID,T> elem;
 
     public AbstractRepository(){
@@ -18,26 +18,26 @@ public class AbstractRepository <T extends Identifiable<ID>, ID> implements Repo
 
     }
     public void add(T el){
-     //   log.traceEntry(" parameters {}",el);
+        //   log.traceEntry(" parameters {}",el);
         if(elem.containsKey(el.getID()))
         {
-        //    throw log.throwing(new RuntimeException("Element already exists!!!"));
-                throw new RuntimeException("Element already exists!!!");
+            //    throw log.throwing(new RuntimeException("Element already exists!!!"));
+            throw new RuntimeException("Element already exists!!!");
         }
         else
             elem.put(el.getID(),el);
-       // log.traceExit();
+        // log.traceExit();
     }
 
     public void delete(T el){
-      //  log.traceEntry("{}",el);
+        //  log.traceEntry("{}",el);
         if(elem.containsKey(el.getID()))
             elem.remove(el.getID());
-       // log.traceExit();
+        // log.traceExit();
     }
 
     public void update(T el,ID id){
-       // log.traceEntry("{}, {}",el,id );
+        // log.traceEntry("{}, {}",el,id );
         if(elem.containsKey(id))
             elem.put(el.getID(),el);
         else
@@ -50,7 +50,7 @@ public class AbstractRepository <T extends Identifiable<ID>, ID> implements Repo
         //log.traceEntry("{}",id);
         if(elem.containsKey(id))
 
-          //  return log.traceExit(elem.get(id));
+            //  return log.traceExit(elem.get(id));
             return elem.get(id);
 
         else {
@@ -68,5 +68,4 @@ public class AbstractRepository <T extends Identifiable<ID>, ID> implements Repo
         return elem.values();
     }
 }
-
 
