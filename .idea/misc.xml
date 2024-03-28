@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/StartBd" />
     <file type="web" url="file://$PROJECT_DIR$/StartGradle" />
+    <file type="web" url="file://$PROJECT_DIR$/TemaLab4" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
